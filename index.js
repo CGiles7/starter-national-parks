@@ -81,3 +81,27 @@ for (let desc of descriptions.values()) {
 
   desc.innerHTML = content;
 }
+
+const ratings = document.querySelectorAll(".rating-display .value");
+
+for (let rating of ratings) {
+  let ratingValue = parseFloat(rating.innerText);
+  console.log(ratingValue);
+}
+
+for (let rating of ratings) {
+  let ratingValue = parseFloat(rating.innerText);
+
+  if (ratingValue > 4.7) {
+    rating.style.fontWeight = "bold";
+  }
+}
+
+for (let rating of ratings) {
+  let ratingValue = parseFloat(rating.innerText);
+
+  if (ratingValue > 4.7) {
+    rating.style.fontWeight = "bold";
+    rating.style.color = "#3ba17c";
+  }
+}
