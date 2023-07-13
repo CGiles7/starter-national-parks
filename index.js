@@ -114,3 +114,16 @@ for (let rating of ratings) {
     rating.classList.remove("value");
   }
 }
+
+const parks = document.querySelectorAll(".park-display");
+
+const numberParks = parks.length;
+
+const newElement = document.createElement("div");
+
+newElement.innerText = `${numberParks} exciting parks to visit`;
+
+newElement.classList.add("header-statement");
+
+const header = document.querySelector("header");
+header.appendChild(newElement);
