@@ -105,3 +105,12 @@ for (let rating of ratings) {
     rating.style.color = "#3ba17c";
   }
 }
+
+for (let rating of ratings) {
+  let ratingValue = parseFloat(rating.innerText);
+
+  if (ratingValue > 4.7) {
+    rating.classList.add("high-rating");
+    rating.classList.remove("value");
+  }
+}
