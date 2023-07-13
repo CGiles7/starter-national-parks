@@ -127,3 +127,12 @@ newElement.classList.add("header-statement");
 
 const header = document.querySelector("header");
 header.appendChild(newElement);
+
+// Get the parent element of all parks
+const main = document.querySelector("main");
+
+// Select a single park
+const park = main.querySelector(".park-display");
+
+// Remove that park
+main.removeChild(park);
