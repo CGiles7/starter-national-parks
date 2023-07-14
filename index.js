@@ -136,3 +136,36 @@ const park = main.querySelector(".park-display");
 
 // Remove that park
 main.removeChild(park);
+
+const firstBtn = document.querySelector("button");
+
+firstBtn.addEventListener("click", (event) => {
+  console.log("You clicked the button", event);
+});
+
+firstBtn.addEventListener("click", (event) => {
+  console.log(event.target);
+});
+
+// Select all the buttons for all the parks
+const allBtns = document.querySelectorAll(".rate-button");
+
+// Iterate through the list of buttons and add an event handler to each
+allBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    console.log(event.target);
+  });
+});
+
+allBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    console.log(event.target.parentNode);
+  });
+});
+
+allBtns.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    const park = event.target.parentNode;
+    park.style.backgroundColor = "#c8e6c9";
+  });
+});
