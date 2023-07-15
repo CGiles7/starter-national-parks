@@ -129,13 +129,13 @@ const header = document.querySelector("header");
 header.appendChild(newElement);
 
 // Get the parent element of all parks
-const main = document.querySelector("main");
+const main1 = document.querySelector("1");
 
 // Select a single park
-const park = main.querySelector(".park-display");
+const park = main1.querySelector(".park-display");
 
 // Remove that park
-main.removeChild(park);
+main1.removeChild(park);
 
 const firstBtn = document.querySelector("button");
 
@@ -258,3 +258,22 @@ console.log("After!");
 
 // Add event listener for `DOMContentLoaded`
 //window.addEventListener("DOMContentLoaded", main);
+
+const submitHandler2 = (event) => {
+  console.log("The form was submitted");
+};
+
+const main = () => {
+  // Get the form element
+  const form = document.querySelector("#park-form");
+
+  // Attach the submit handler
+  form.addEventListener("submit", submitHandler2);
+};
+
+window.addEventListener("DOMContentLoaded", main);
+
+const submitHandler = (event) => {
+  event.preventDefault();
+  console.log("The form was submitted");
+};
